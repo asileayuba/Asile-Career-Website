@@ -8,11 +8,35 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
     <title>Asile Portfolio</title>
     <style>
+        /* Background image with a dark overlay */
+        body {
+            background-image: url("static/Background-Image.jpg");
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        /* Overlay to darken background */
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6); /* Dark overlay */
+            z-index: -1;
+        }
+
+        /* Adjusting text colors for better readability */
+        h1, h2, p, ul, li, h5 {
+            color: #ffffff; /* White text */
+        }
+
         h1 {
             font-size: 50px;
             font-family: 'Times New Roman', Times, serif;
             font-weight: normal;
-            color: rgb(50, 50, 50);
             text-align: center;
         }
 
@@ -45,98 +69,171 @@
         .social-links a:hover {
             color: #0056b3;
         }
+
+        .bg-light {
+            background-color: rgba(255, 255, 255, 0.8) !important; /* Lighter background for form */
+        }
+
+        /* Add padding to the top of sections to account for the fixed navbar */
+        section {
+            padding-top: 80px; /* Adjust this value to match the height of your navbar */
+        }
+
+
     </style>
 </head>
 <body>
 
-<div class="container">
-    <h1 class="mt-4 mb-4">Asile Portfolio</h1>
-
-    <div class="row justify-content-center">
-        <div class="col-md-4 text-center">
-            <img id="banner" src="./static/Banner.jpg" alt="Asile Careers" class="img-fluid rounded-circle">
-        </div>
-    </div>
-
-    <!-- About Section -->
-    <section id="about">
-        <h2>About Asile</h2>
-        <p class="lead"><strong>Asile Ayuba | Aspiring AI Engineer & Web Developer</strong></p>
-        <p class="lead">Welcome to my career portfolio! I am <strong>Asile Ayuba</strong>, an Aerospace Engineering student passionate about technology and innovation. Currently exploring AI and software development, specializing in Python, web technologies, and generative AI.</p>
-        <p class="lead">I’m building expertise in <strong>database design</strong> and <strong>SQL programming</strong>, actively participating in the Power Learn Project to develop strong foundations in <strong>software engineering</strong> and <strong>entrepreneurship</strong>.</p>
-        <p class="lead">Explore my portfolio to learn more about my projects, skills, and future aspirations!</p>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills">
-        <h2>Skills</h2>
-        <ul>
-            <li>Python Programming</li>
-            <li>Flask Framework</li>
-            <li>Web Development (HTML, CSS)</li>
-            <li>SQL & Database Design</li>
-            <li>Project Management</li>
-        </ul>
-    </section>
-
-    <!-- Educational Background -->
-    <section id="education">
-        <h2>Educational Background</h2>
-        <p>You can download my CV <a href="static/Asile's Resume.pdf" download>here</a>.</p>
-    </section>
-
-    <!-- Interests Section -->
-    <section id="interests">
-        <h2>Interests</h2>
-        <ul>
-            <li>Generative AI</li>
-            <li>Astronautical Engineering</li>
-            <li>Web Development</li>
-            <li>AI Solutions in Aerospace</li>
-        </ul>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects">
-        <h2 class="text-center">Projects</h2>
-        <div class="project">
-            <h5>Hackathon Project</h5>
-            <p>Built a web application using Flask, Python, HTML, and CSS. [Problem solved]. Deployed on GitHub.</p>
-            <a href="GitHub link">View on GitHub</a><br><br>
-        </div>
-    </section>
-
-    <!-- Contact Form Section -->
-    <div class="contact-form-container">
-        <form class="contact-form bg-light p-4 border rounded">
-            <h2 class="text-center mb-4">Contact Me</h2>
-            <div class="form-group">
-                <label for="name">Name</label>
-                <input type="text" class="form-control" id="name" placeholder="Your Name">
+    <nav class="navbar bg-body-tertiary fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+            <div class="text-nowrap bg-body-secondary border" style="width: 8rem;">
+                Asile Portfolio
             </div>
-            <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" class="form-control" id="email" placeholder="Your Email">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Navigation</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+              <li class="nav-item">
+                <a class="nav-link" href="#about">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#skills">Skills</a>
+              </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#education">Educational Background</a>
+                  </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#interests">Interests</a>
+                  </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#projects">Projects</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#contact">Contact</a>
+              </li>
+              <li class="nav-item">
+                <a class="btn btn-success mt-3" href="static/Asile's Resume.pdf" download>Download CV</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav><br><br><br>
+
+    <div class="container">
+        
+        <!-- About Section -->
+        <section id="about">
+        <div class="row justify-content-center">
+            <div class="col-md-4 text-center">
+                <img id="banner" src="./static/Banner.jpg" alt="Asile Careers" class="img-fluid rounded-circle">
             </div>
-            <div class="form-group">
-                <label for="message">Message</label>
-                <textarea class="form-control" id="message" rows="4" placeholder="Your Message"></textarea>
-            </div><br>
-            <button type="submit" class="btn btn-primary btn-block">Submit</button>
-        </form>
+        </div>
+            
+            <h2>About Asile</h2>
+            <p class="lead"><strong>Asile Ayuba | Aspiring AI Engineer & Web Developer</strong></p>
+            <p class="lead">Welcome to my career portfolio! I am <strong>Asile Ayuba</strong>, an Aerospace Engineering student passionate about technology and innovation. Currently exploring AI and software development, specializing in Python, web technologies, and generative AI.</p>
+            <p class="lead">I’m building expertise in <strong>database design</strong> and <strong>SQL programming</strong>, actively participating in the Power Learn Project to develop strong foundations in <strong>software engineering</strong> and <strong>entrepreneurship</strong>.</p>
+            <p class="lead">Explore my portfolio to learn more about my projects, skills, and future aspirations!</p>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills">
+            <h2>Skills</h2>
+            <ul>
+                <li>Python Programming</li>
+                <li>Flask Framework</li>
+                <li>Web Development (HTML, CSS)</li>
+                <li>SQL & Database Design</li>
+                <li>Project Management</li>
+            </ul>
+        </section>
+
+        <!-- Educational Background -->
+        <section id="education">
+            <h2>Educational Background</h2>
+            <p class="lead">
+                I am currently pursuing a degree in Aerospace Engineering with a strong focus on astronautical engineering. My academic journey has provided me with a solid foundation in engineering principles and has fueled my passion for technology and innovation. In addition to my formal education, I am actively expanding my knowledge through various online courses and programs. I am enrolled in Coursera courses on Financial Technology and Project Management, enhancing my skills in these crucial areas. I am also participating in the Power Learn Project's Software Development Scholarship, where I am further honing my expertise in software engineering, database design, and entrepreneurship.
+            </p>
+            <p>You can download my CV <a href="static/Asile's Resume.pdf" download>here</a>.</p>
+        </section>
+
+        <!-- Interests Section -->
+        <section id="interests">
+            <h2>Interests</h2>
+            <ul>
+                <li>Generative AI</li>
+                <li>Astronautical Engineering</li>
+                <li>Web Development</li>
+                <li>AI Solutions in Aerospace</li>
+            </ul>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects">
+            <h2 class="text-center">Projects</h2>
+            <div class="project">
+                <h5>Hackathon Project</h5>
+                <p>Built a web application using Flask, Python, HTML, and CSS. [Problem solved]. Deployed on GitHub.</p>
+                <a href="GitHub link">View on GitHub</a><br><br>
+            </div>
+        </section>
+
+        <!-- Contact Form Section -->
+        <section id="contact">
+            <div class="contact-form-container">
+                <form class="contact-form bg-light p-4 border rounded">
+                    <h2 class="text-center mb-4">Contact Me</h2>
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" class="form-control" id="name" placeholder="Your Name">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" class="form-control" id="email" placeholder="Your Email">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea class="form-control" id="message" rows="4" placeholder="Your Message"></textarea>
+                    </div><br>
+                    <button type="submit" class="btn btn-primary btn-block">Submit</button>
+                </form>
+            </div>
+
+            <!-- Social Media Links -->
+            <div class="social-links text-center mt-4">
+                <p>Or connect with me:</p>
+                <a href="https://www.linkedin.com/in/asileayuba" target="_blank" title="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://twitter.com/asileayuba" target="_blank" title="Twitter">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://github.com/asileayuba" target="_blank" title="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+        </section>
     </div>
 
-    <!-- Social Media Links -->
-    <div class="social-links text-center mt-4">
-        <p>Or connect with me:</p>
-        <a href="https://www.linkedin.com/in/asileayuba" target="_blank" title="LinkedIn">
-            <i class="fab fa-linkedin"></i>
-        </a>
-        <a href="https://github.com/asileayuba" target="_blank" title="GitHub">
-            <i class="fab fa-github"></i>
-        </a>
-    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-</div>
+        <!-- Footer Section -->
+        <footer class="bg-dark text-white text-center py-3 mt-5">
+            <div class="container">
+                <p class="mb-0">&copy; 2024 Asile Portfolio. All Rights Reserved.</p>
+            </div>
+        </footer>
+
+    </footer>
+
 </body>
 </html>

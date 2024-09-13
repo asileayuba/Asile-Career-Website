@@ -10,18 +10,20 @@
 
     <title>Asile Portfolio</title>
     <style>
+        /* Apply Roboto font family to the entire page */
         * {
-            font-family: 'Times New Roman', Times, serif;
+            font-family: 'Roboto', sans-serif;
         }
-
-        /* Background image with a dark overlay */
+    
+        /* Adjust global font sizes for uniformity and Background image with a dark overlay  */
         body {
             background-image: url("{{ url_for('static', filename='Background-Image.jpg') }}");
             background-size: cover;
             background-position: center;
             position: relative;
             color: white; /* Ensure text is white */
-            font-family: 'Roboto', sans-serif; /* Set the default font-family for the entire page */
+            font-size: 16px; /* Base font size */
+            line-height: 1.6;
         }
 
         /* Overlay to darken background */
@@ -35,27 +37,25 @@
             background-color: rgba(0, 0, 0, 0.6); /* Dark overlay */
             z-index: -1;
         }
-
-        /* Adjusting text colors for better readability */
-        h1, h2, p, ul, li, h5 {
-            color: #ffffff; /* White text */
+    
+        h1, h2 {
+            font-family: 'Roboto', sans-serif;
+            font-weight: 700;
+            font-size: 2.5rem;
         }
-
+    
+        p, ul, li, h5 {
+            font-size: 1.125rem;
+        }
+    
+        /* Specific adjustments for better consistency */
         h2 {
-            font-size: 50px;
-            font-family: 'Times New Roman', Times, serif;
-            font-weight: normal;
+            font-size: 2rem;
             text-align: left;
         }
-
-        #banner {
-            width: 100%;
-            height: 360px;
-            object-fit: cover;
-        }
-
-        p {
-            font-family: Roboto;
+    
+        .social-links a {
+            font-size: 1.5rem; /* Icons will have a nice consistent size */
         }
 
         #container {
@@ -86,7 +86,18 @@
         section {
             padding-top: 80px; /* Adjust this value to match the height of your navbar */
         }
+    
+        .form-control {
+            font-size: 1rem; /* Form input text size */
+        }
+    
+        /* Footer text size */
+        footer p {
+            font-size: 0.875rem;
+        }
     </style>
+    
+
 </head>
 <body>
 
@@ -146,7 +157,7 @@
                 </div>
             </div>
             <h2>About Asile</h2>
-            <p class="lead"><strong>Aerospace Engineering | Aspiring AI Engineer & Web Developer</strong></p>
+            <p class="lead"><strong><em>Aerospace Engineering | Aspiring AI Engineer & Web Developer</em></strong></p>
             <p class="lead">Welcome to my career portfolio! I am <strong>Asile Ayuba</strong>, an Aerospace Engineering student passionate about technology and innovation. Currently exploring AI and software development, specializing in Python, web technologies, and generative AI.</p>
             <p class="lead">I’m building expertise in <strong>database design</strong> and <strong>SQL programming</strong>, actively participating in the Power Learn Project to develop strong foundations in <strong>software engineering</strong> and <strong>entrepreneurship</strong>.</p>
             <p class="lead">Explore my portfolio to learn more about my projects, skills, and future aspirations!</p>

@@ -1,84 +1,94 @@
-# Hackathon Project: Flask Contact Form Application
+# Asile Portfolio Website
 
 ## Overview
-This project is a Flask-based web application designed as a contact form. It allows users to submit their name, email, and message, which are then stored in a SQLite database using SQLAlchemy. The application includes routes for the home page, contact form submission, and a thank-you page.
-
-## Features
-- **Contact Form**: Collects user inputs (name, email, message).
-- **Database Storage**: Saves submissions to an SQLite database using SQLAlchemy.
-- **Responsive Design**: Built with Bootstrap for a user-friendly interface.
-- **Thank You Page**: Confirmation page shown after form submission.
+This is a personal portfolio website showcasing Asile Ayuba’s background in Aerospace Engineering, AI, and Web Development. The website is built using HTML, CSS, and Flask, with a responsive design powered by Bootstrap. It features sections such as "About," "Skills," "Educational Background," "Projects," and "Contact" with social media links.
 
 ## Table of Contents
-1. Installation
-2. Usage
-3. Routes
-4. Technologies Used
-5. Contributing
-6. License
+1. Features
+2. Installation
+3. Usage
+4. Sections
+5. Technologies Used
+6. Contributing
+7. License
+
+## Features
+- **Responsive Design**: Uses Bootstrap for responsiveness across devices.
+- **Dynamic Contact Form**: Allows visitors to submit messages, stored using a Flask back-end (SQLite).
+- **Portfolio Showcase**: Displays key skills, projects, and educational background.
+- **Social Media Links**: LinkedIn, Twitter, and GitHub links for easy connection.
+- **CV Download**: Allows users to download a resume in PDF format.
 
 ## Installation
 
 ### Prerequisites
-- Python 3.7 or higher
+- Python 3.x
 - Flask
-- SQLAlchemy
-- SQLite
+- SQLite (Optional: for local database)
+- Internet connection (for Bootstrap and Font Awesome CDN)
 
 ### Setup Instructions
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/yourusername/hackathon-contact-form.git
-   cd hackathon-contact-form
+   git clone https://github.com/yourusername/asile-portfolio.git
+   cd asile-portfolio
    ```
 
-2. **Create and activate a virtual environment** (recommended):
+2. **Create and activate a virtual environment**:
    ```bash
    python -m venv venv
    source venv/bin/activate   # On Windows use `venv\Scripts\activate`
    ```
 
-3. **Install the required packages**:
+3. **Install Flask and dependencies**:
    ```bash
-   pip install -r requirements.txt
+   pip install Flask
    ```
 
-4. **Initialize the database**:
-   Run the following commands in a Python shell to create the database:
-   ```bash
-   python
-   >>> from app import db
-   >>> db.create_all()
-   >>> exit()
-   ```
-
-5. **Run the application**:
+4. **Run the application**:
    ```bash
    flask run
    ```
-   Access the application at `http://127.0.0.1:5000`.
+   Visit `http://127.0.0.1:5000` to view the website.
 
 ## Usage
-- Navigate to the homepage to access the contact form.
-- Fill out the form with your name, email, and message.
-- Submit the form to store the data and be redirected to the thank-you page.
+- **About Section**: Learn about Asile’s background in Aerospace Engineering and AI.
+- **Skills Section**: Lists programming languages, frameworks, and project management skills.
+- **Educational Background**: Displays academic and course achievements.
+- **Projects Section**: View notable projects, including a GitHub link for the hackathon project.
+- **Contact Section**: Submit a message directly to Asile through the contact form.
+- **Social Media**: Connect with Asile via LinkedIn, Twitter, and GitHub.
 
-## Routes
-- **`/`**: Displays the contact form.
-- **`/submit`**: Handles form submissions and stores data in the database.
-- **`/thankyou`**: Shows a confirmation message after successful form submission.
+## Sections
+
+### 1. **About Section**
+   - Profile picture and a brief description of Asile’s background and goals.
+
+### 2. **Skills Section**
+   - Highlights key technical skills such as Python, Flask, SQL, and project management.
+
+### 3. **Educational Background**
+   - Detailed educational journey with a focus on Aerospace Engineering and software development.
+   
+### 4. **Interests Section**
+   - Focuses on areas of interest, such as Generative AI and Astronautical Engineering.
+
+### 5. **Projects Section**
+   - Lists projects, including the hackathon portfolio project, with GitHub links.
+
+### 6. **Contact Section**
+   - Dynamic contact form for visitors to reach out, along with social media icons for easy connection.
 
 ## Technologies Used
-- **Flask**: Web framework for Python.
-- **SQLAlchemy**: ORM for interacting with the SQLite database.
-- **SQLite**: Lightweight database for storing contact form data.
-- **Bootstrap**: Framework for responsive design.
-- **HTML/CSS**: For structuring and styling the web pages.
+- **HTML5/CSS3**: Structure and styling of the website.
+- **Flask**: Backend framework for form handling and routing.
+- **Bootstrap 5.3**: CSS framework for responsive design.
+- **Font Awesome**: Icon library for social media links.
+- **Google Fonts (Roboto)**: Custom font for a modern look.
 
 ## Contributing
-Feel free to fork the repository and submit pull requests for any improvements or fixes.
+Feel free to fork the repository and submit pull requests. Any contributions to enhance the design, functionality, or content are welcome.
 
 ## License
-This project is licensed under the MIT License.
-
+This project is licensed under the MIT License. See the LICENSE file for more information. 
 

@@ -92,3 +92,6 @@ Feel free to fork the repository and submit pull requests. Any contributions to 
 ## License
 This project is licensed under the MIT License. See the LICENSE file for more information. 
 
+## DEPLOYED ON NETLIFY
+https://asile-portfolio.netlify.app/
+
